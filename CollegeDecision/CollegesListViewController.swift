@@ -65,7 +65,7 @@ class CollegesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCollege" {
-            let destination = segue.destination as! CollegeDetailViewController
+            let destination = segue.destination as! CollegesDetailViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
             destination.college = colleges.collegeArray[selectedIndexPath.row]
         } else {
