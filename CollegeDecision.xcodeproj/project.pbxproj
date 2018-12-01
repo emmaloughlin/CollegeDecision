@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		956650678FF17AD765BC3802 /* Pods_CollegeDecision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE24E9753591ED6834D0F57E /* Pods_CollegeDecision.framework */; };
-		EC707C7321B0DFAA00FB1CA5 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7221B0DFAA00FB1CA5 /* UIView+addBorder.swift */; };
+		EC1A86FA21B23D400060D1ED /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A86F921B23D400060D1ED /* UIView+addBorder.swift */; };
+		EC1A86FC21B23DAC0060D1ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC1A86FB21B23DAC0060D1ED /* GoogleService-Info.plist */; };
+		EC1A86FE21B2E1CE0060D1ED /* CollegesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */; };
 		EC707C7521B1163B00FB1CA5 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7421B1163B00FB1CA5 /* Review.swift */; };
 		EC707C7721B1306B00FB1CA5 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7621B1306B00FB1CA5 /* Reviews.swift */; };
 		EC707C7921B1AAFB00FB1CA5 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7821B1AAFB00FB1CA5 /* Double+roundTo.swift */; };
 		EC947E4921B0557F004429E8 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC947E4821B0557F004429E8 /* ReviewTableViewController.swift */; };
-		EC947E4B21B06230004429E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC947E4A21B06230004429E8 /* GoogleService-Info.plist */; };
 		ECEE508721AE1BCF00C5A50B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE508621AE1BCF00C5A50B /* AppDelegate.swift */; };
 		ECEE508921AE1BCF00C5A50B /* CollegesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE508821AE1BCF00C5A50B /* CollegesListViewController.swift */; };
 		ECEE508C21AE1BCF00C5A50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEE508A21AE1BCF00C5A50B /* Main.storyboard */; };
@@ -30,12 +31,13 @@
 		24354BD9E1C1A2C27070205D /* Pods-CollegeDecision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollegeDecision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollegeDecision/Pods-CollegeDecision.debug.xcconfig"; sourceTree = "<group>"; };
 		75F088C6158AA439533DE8D6 /* Pods-CollegeDecision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollegeDecision.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollegeDecision/Pods-CollegeDecision.release.xcconfig"; sourceTree = "<group>"; };
 		DE24E9753591ED6834D0F57E /* Pods_CollegeDecision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollegeDecision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC707C7221B0DFAA00FB1CA5 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		EC1A86F921B23D400060D1ED /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		EC1A86FB21B23DAC0060D1ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesDetailViewController.swift; sourceTree = "<group>"; };
 		EC707C7421B1163B00FB1CA5 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EC707C7621B1306B00FB1CA5 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		EC707C7821B1AAFB00FB1CA5 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		EC947E4821B0557F004429E8 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
-		EC947E4A21B06230004429E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ECEE508321AE1BCF00C5A50B /* CollegeDecision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeDecision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEE508621AE1BCF00C5A50B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEE508821AE1BCF00C5A50B /* CollegesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesListViewController.swift; sourceTree = "<group>"; };
@@ -108,15 +110,16 @@
 				ECEE508821AE1BCF00C5A50B /* CollegesListViewController.swift */,
 				ECEE50A221AF7E0200C5A50B /* CollegesTableViewCell.swift */,
 				ECEE509A21AF77D200C5A50B /* CollegeDetailViewController.swift */,
+				EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */,
 				ECEE50A421AF80B100C5A50B /* CollegeReviewsTableViewCell.swift */,
 				EC947E4821B0557F004429E8 /* ReviewTableViewController.swift */,
 				EC707C7821B1AAFB00FB1CA5 /* Double+roundTo.swift */,
-				EC707C7221B0DFAA00FB1CA5 /* UIView+addBorder.swift */,
+				EC1A86F921B23D400060D1ED /* UIView+addBorder.swift */,
 				ECEE508A21AE1BCF00C5A50B /* Main.storyboard */,
 				ECEE508D21AE1BD100C5A50B /* Assets.xcassets */,
 				ECEE508F21AE1BD100C5A50B /* LaunchScreen.storyboard */,
 				ECEE509221AE1BD100C5A50B /* Info.plist */,
-				EC947E4A21B06230004429E8 /* GoogleService-Info.plist */,
+				EC1A86FB21B23DAC0060D1ED /* GoogleService-Info.plist */,
 			);
 			path = CollegeDecision;
 			sourceTree = "<group>";
@@ -183,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEE509121AE1BD100C5A50B /* LaunchScreen.storyboard in Resources */,
-				EC947E4B21B06230004429E8 /* GoogleService-Info.plist in Resources */,
+				EC1A86FC21B23DAC0060D1ED /* GoogleService-Info.plist in Resources */,
 				ECEE508E21AE1BD100C5A50B /* Assets.xcassets in Resources */,
 				ECEE508C21AE1BCF00C5A50B /* Main.storyboard in Resources */,
 			);
@@ -333,10 +336,11 @@
 				ECEE508721AE1BCF00C5A50B /* AppDelegate.swift in Sources */,
 				EC707C7521B1163B00FB1CA5 /* Review.swift in Sources */,
 				ECEE50A321AF7E0200C5A50B /* CollegesTableViewCell.swift in Sources */,
+				EC1A86FA21B23D400060D1ED /* UIView+addBorder.swift in Sources */,
 				EC707C7921B1AAFB00FB1CA5 /* Double+roundTo.swift in Sources */,
 				ECEE50A721AF83A300C5A50B /* College.swift in Sources */,
 				ECEE50A921AF86EC00C5A50B /* Colleges.swift in Sources */,
-				EC707C7321B0DFAA00FB1CA5 /* UIView+addBorder.swift in Sources */,
+				EC1A86FE21B2E1CE0060D1ED /* CollegesDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

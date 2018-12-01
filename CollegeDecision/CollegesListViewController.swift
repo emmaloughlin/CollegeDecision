@@ -31,6 +31,7 @@ class CollegesListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.isHidden = true
         
         
@@ -113,7 +114,7 @@ extension CollegesListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CollegesTableViewCell
-        cell.nameLabel.text = colleges.collegeArray[indexPath.row].name 
+        cell.nameLabel?.text = colleges.collegeArray[indexPath.row].name
         return cell
     }
     

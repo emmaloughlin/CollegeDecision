@@ -18,8 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         GMSPlacesClient.provideAPIKey("AIzaSyDc4FYXFpLS0ByDdJi7QypKnk288fuul2c")
-        FirebaseApp.configure() 
+                FirebaseApp.configure() 
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
         return true
     }
 
