@@ -11,6 +11,7 @@
 		EC1A86FA21B23D400060D1ED /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A86F921B23D400060D1ED /* UIView+addBorder.swift */; };
 		EC1A86FC21B23DAC0060D1ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC1A86FB21B23DAC0060D1ED /* GoogleService-Info.plist */; };
 		EC1A86FE21B2E1CE0060D1ED /* CollegesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */; };
+		EC1E9A9821B329B200CC86EC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1E9A9721B329B200CC86EC /* MapKit.framework */; };
 		EC707C7521B1163B00FB1CA5 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7421B1163B00FB1CA5 /* Review.swift */; };
 		EC707C7721B1306B00FB1CA5 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7621B1306B00FB1CA5 /* Reviews.swift */; };
 		EC707C7921B1AAFB00FB1CA5 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC707C7821B1AAFB00FB1CA5 /* Double+roundTo.swift */; };
@@ -20,7 +21,6 @@
 		ECEE508C21AE1BCF00C5A50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEE508A21AE1BCF00C5A50B /* Main.storyboard */; };
 		ECEE508E21AE1BD100C5A50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEE508D21AE1BD100C5A50B /* Assets.xcassets */; };
 		ECEE509121AE1BD100C5A50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEE508F21AE1BD100C5A50B /* LaunchScreen.storyboard */; };
-		ECEE509B21AF77D200C5A50B /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE509A21AF77D200C5A50B /* CollegeDetailViewController.swift */; };
 		ECEE50A321AF7E0200C5A50B /* CollegesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE50A221AF7E0200C5A50B /* CollegesTableViewCell.swift */; };
 		ECEE50A521AF80B100C5A50B /* CollegeReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE50A421AF80B100C5A50B /* CollegeReviewsTableViewCell.swift */; };
 		ECEE50A721AF83A300C5A50B /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE50A621AF83A300C5A50B /* College.swift */; };
@@ -34,6 +34,7 @@
 		EC1A86F921B23D400060D1ED /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		EC1A86FB21B23DAC0060D1ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesDetailViewController.swift; sourceTree = "<group>"; };
+		EC1E9A9721B329B200CC86EC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC707C7421B1163B00FB1CA5 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EC707C7621B1306B00FB1CA5 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		EC707C7821B1AAFB00FB1CA5 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		ECEE508D21AE1BD100C5A50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEE509021AE1BD100C5A50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEE509221AE1BD100C5A50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECEE509A21AF77D200C5A50B /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
 		ECEE50A221AF7E0200C5A50B /* CollegesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesTableViewCell.swift; sourceTree = "<group>"; };
 		ECEE50A421AF80B100C5A50B /* CollegeReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		ECEE50A621AF83A300C5A50B /* College.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
@@ -57,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1E9A9821B329B200CC86EC /* MapKit.framework in Frameworks */,
 				956650678FF17AD765BC3802 /* Pods_CollegeDecision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +77,7 @@
 		364607B8B5EE100643315317 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC1E9A9721B329B200CC86EC /* MapKit.framework */,
 				DE24E9753591ED6834D0F57E /* Pods_CollegeDecision.framework */,
 			);
 			name = Frameworks;
@@ -109,7 +111,6 @@
 				EC707C7421B1163B00FB1CA5 /* Review.swift */,
 				ECEE508821AE1BCF00C5A50B /* CollegesListViewController.swift */,
 				ECEE50A221AF7E0200C5A50B /* CollegesTableViewCell.swift */,
-				ECEE509A21AF77D200C5A50B /* CollegeDetailViewController.swift */,
 				EC1A86FD21B2E1CE0060D1ED /* CollegesDetailViewController.swift */,
 				ECEE50A421AF80B100C5A50B /* CollegeReviewsTableViewCell.swift */,
 				EC947E4821B0557F004429E8 /* ReviewTableViewController.swift */,
@@ -159,6 +160,11 @@
 				TargetAttributes = {
 					ECEE508221AE1BCF00C5A50B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -330,7 +336,6 @@
 			files = (
 				ECEE50A521AF80B100C5A50B /* CollegeReviewsTableViewCell.swift in Sources */,
 				ECEE508921AE1BCF00C5A50B /* CollegesListViewController.swift in Sources */,
-				ECEE509B21AF77D200C5A50B /* CollegeDetailViewController.swift in Sources */,
 				EC947E4921B0557F004429E8 /* ReviewTableViewController.swift in Sources */,
 				EC707C7721B1306B00FB1CA5 /* Reviews.swift in Sources */,
 				ECEE508721AE1BCF00C5A50B /* AppDelegate.swift in Sources */,
