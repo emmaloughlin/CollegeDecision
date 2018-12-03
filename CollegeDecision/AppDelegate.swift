@@ -20,11 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSPlacesClient.provideAPIKey("AIzaSyCJ30xUUel1k-eUligfWIsx8VQUAfv2ZAM")
-        FirebaseApp.configure() 
-        let db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
+        FirebaseApp.configure()
+        
+//        let db = Firestore.firestore()
+//        let settings = db.settings
+//        settings.areTimestampsInSnapshotsEnabled = true
+//        db.settings = settings
+        
         return true
     }
 

@@ -14,7 +14,7 @@ import MapKit
 class College: NSObject, MKAnnotation {
     
     var name: String
-    var address: String
+    var address: String?
     var coordinate: CLLocationCoordinate2D
     var averageLocationRating: Double
     var averageNightlifeRating: Double
@@ -38,7 +38,7 @@ class College: NSObject, MKAnnotation {
         return coordinate.latitude
     }
     
-    var nameTitle: String? {
+    var title: String? {
         return name
     }
     
@@ -47,7 +47,7 @@ class College: NSObject, MKAnnotation {
     }
     
     var dictionary: [String: Any] {
-        return ["name": name, "address": address, "longitude": longitude, "latitude": latitude, "averageLocationRating": averageLocationRating,"averageNightlifeRating": averageNightlifeRating,"averageFoodRating": averageFoodRating,"averageProfessorRating": averageProfessorRating,"averageDiversityRating": averageDiversityRating,"averageSportsRating": averageSportsRating,"averageWeatherRating": averageWeatherRating,"averageGreekLifeRating": averageGreekLifeRating,"averageClassroomSizeRating": averageClassroomSizeRating,"averageWorkloadRating": averageWorkloadRating, "numberOfReviews": numberOfReviews, "postingUserID": postingUserID]
+        return ["name": name, "address": address!, "longitude": longitude, "latitude": latitude, "averageLocationRating": averageLocationRating,"averageNightlifeRating": averageNightlifeRating,"averageFoodRating": averageFoodRating,"averageProfessorRating": averageProfessorRating,"averageDiversityRating": averageDiversityRating,"averageSportsRating": averageSportsRating,"averageWeatherRating": averageWeatherRating,"averageGreekLifeRating": averageGreekLifeRating,"averageClassroomSizeRating": averageClassroomSizeRating,"averageWorkloadRating": averageWorkloadRating, "numberOfReviews": numberOfReviews, "postingUserID": postingUserID]
     }
     
     init(name: String, address: String, coordinate: CLLocationCoordinate2D, averageLocationRating: Double, averageNightlifeRating: Double, averageFoodRating: Double, averageProfessorRating: Double, averageDiversityRating: Double, averageSportsRating: Double, averageWeatherRating: Double, averageGreekLifeRating: Double, averageClassroomSizeRating: Double, averageWorkloadRating: Double, numberOfReviews: Int, postingUserID: String, documentID: String) {
@@ -97,6 +97,7 @@ class College: NSObject, MKAnnotation {
     }
     
     func saveData(completed: @escaping (Bool) -> ()) {
+        print("SAVING DATA...")
         let db = Firestore.firestore()
         // Grab the userID
         guard let postingUserID = (Auth.auth().currentUser?.uid) else {
@@ -108,6 +109,8 @@ class College: NSObject, MKAnnotation {
         let dataToSave = self.dictionary
 
         if self.documentID != "" {
+            print("Updating existing document: ")
+            print(self.documentID)
             let ref = db.collection("colleges").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 if let error = error {
@@ -119,6 +122,7 @@ class College: NSObject, MKAnnotation {
                 }
             }
         } else {
+            print("Creating new document")
             var ref: DocumentReference? = nil // Let firestore create the new documentID
             ref = db.collection("colleges").addDocument(data: dataToSave) { error in
                 if let error = error {
@@ -132,6 +136,8 @@ class College: NSObject, MKAnnotation {
             }
         }
     }
+    
+    
     func updatelocationRatingAverage(completed: @escaping ()->()) {
         let db = Firestore.firestore()
         let reviewsRef = db.collection("colleges").document(self.documentID).collection("reviews")
@@ -149,8 +155,8 @@ class College: NSObject, MKAnnotation {
             self.averageLocationRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -176,8 +182,8 @@ class College: NSObject, MKAnnotation {
             self.averageNightlifeRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -203,8 +209,8 @@ class College: NSObject, MKAnnotation {
             self.averageFoodRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -230,8 +236,8 @@ class College: NSObject, MKAnnotation {
             self.averageProfessorRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -256,8 +262,8 @@ class College: NSObject, MKAnnotation {
             self.averageDiversityRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -282,8 +288,8 @@ class College: NSObject, MKAnnotation {
             self.averageSportsRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -308,8 +314,8 @@ class College: NSObject, MKAnnotation {
             self.averageWeatherRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -334,8 +340,8 @@ class College: NSObject, MKAnnotation {
             self.averageGreekLifeRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -360,8 +366,8 @@ class College: NSObject, MKAnnotation {
             self.averageClassroomSizeRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }
@@ -386,8 +392,8 @@ class College: NSObject, MKAnnotation {
             self.averageWorkloadRating = ratingTotal / Double(querySnapshot!.count)
             self.numberOfReviews = querySnapshot!.count
             let dataToSave = self.dictionary
-            let spotRef = db.collection("colleges").document(self.documentID)
-            spotRef.setData(dataToSave) { error in
+            let collegeRef = db.collection("colleges").document(self.documentID)
+            collegeRef.setData(dataToSave) { error in
                 guard error == nil else {
                     return completed()
                 }

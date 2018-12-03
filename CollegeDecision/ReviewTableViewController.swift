@@ -167,19 +167,7 @@ class ReviewTableViewController: UITableViewController {
         updateUserInterface()
     }
     
-//    func setStar(stars: [UIButton]) -> UIButton {
-//        var setStars = stars
-//        for starButton in setStars {
-//            starButton.backgroundColor = UIColor.white
-//            starButton.adjustsImageWhenDisabled = false
-//            starButton.isEnabled = false
-//            reviewTitleField.isEnabled = false
-//            reviewTextView.isEditable = false
-//            reviewTitleField.backgroundColor = UIColor.white
-//            reviewTextView.backgroundColor = UIColor.white
-//        }
-//        return setStars
-//    }
+
     
     func updateUserInterface() {
         nameLabel.text = college.name
@@ -196,7 +184,7 @@ class ReviewTableViewController: UITableViewController {
         workloadRating = review.workloadRating
         reviewTitleField.text = review.title
         reviewTextView.text = review.text
-        enableDisableSaveButton()
+//        enableDisableSaveButton()
         
         
         
@@ -211,8 +199,7 @@ class ReviewTableViewController: UITableViewController {
             } else {
                 cancelBarButton.title = ""
                 saveBarButton.title = ""
-//                locationStar = setStar(stars: locationStar)
-//                nightlifeStar = setStar(stars: nightlifeStar)
+
                 for starButton in locationStar {
                     starButton.backgroundColor = UIColor.white
                     starButton.adjustsImageWhenDisabled = false
@@ -323,11 +310,30 @@ class ReviewTableViewController: UITableViewController {
         foodBackgroundView.addBorder(width: 0.5, radius: 5.0, color: .black)
     }
     
-    func enableDisableSaveButton() {
-        if reviewTitleField.text != "" {
-            saveBarButton.isEnabled = true
-        } else {
-            saveBarButton.isEnabled = false
+//    func enableDisableSaveButton() {
+//        if reviewTitleField.text != "" {
+//            saveBarButton.isEnabled = true
+//        } else {
+//            saveBarButton.isEnabled = false
+//        }
+//    }
+    
+    func saveAndSegue() {
+        review.title = reviewTitleField.text!
+        review.text = reviewTextView.text!
+        college.saveData { success in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("*** ERROR: Please save data.")
+            }
+        }
+        review.saveData(college: college) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("error -")
+            }
         }
     }
     
@@ -382,24 +388,12 @@ class ReviewTableViewController: UITableViewController {
     }
     
     
-    func saveAndSegue() {
-        review.title = reviewTitleField.text!
-        review.text = reviewTextView.text!
-        review.saveData(college: college) { (success) in
-            if success {
-                self.leaveViewController()
-            } else {
-                print("error -")
-            }
-        }
+    @IBAction func reviewTitleChanged(_ sender: UITextField) {
+//        enableDisableSaveButton()
     }
     
     @IBAction func returnTitleDonePressed(_ sender: UITextField) {
         saveAndSegue()
-    }
-    
-    @IBAction func reviewTitleChanged(_ sender: UITextField) {
-        enableDisableSaveButton()
     }
     
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
@@ -416,10 +410,12 @@ class ReviewTableViewController: UITableViewController {
         leaveViewController()
     }
     
+    
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        saveAndSegue()
         
+        saveAndSegue()
     }
+    
     }
     
     

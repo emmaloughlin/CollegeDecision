@@ -62,7 +62,6 @@ class Review {
         let classroomSizeRating = dictionary["classroomSizeRating"] as! Int? ?? 0
         let workloadRating = dictionary["workloadRating"] as! Int? ?? 0
         let reviewerUserID = dictionary["reviewerUserID"] as! String? ?? ""
-        let documentID = dictionary["documentID"] as! String? ?? ""
         self.init(title: title, text: text,locationRating: locationRating, nightlifeRating: nightlifeRating,foodRating: foodRating,professorRating: professorRating,diversityRating: diversityRating,sportsRating: sportsRating,weatherRating: weatherRating,greekLifeRating: greekLifeRating,classroomSizeRating: classroomSizeRating,workloadRating: workloadRating,reviewerUserID: reviewerUserID, documentID: "")
     }
     
@@ -82,10 +81,11 @@ class Review {
             let ref = db.collection("colleges").document(college.documentID).collection("reviews").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 if let error = error {
-                    print("*** ERROR: updating document \(self.documentID) in college \(college.documentID) \(error.localizedDescription)")
+                    print("*** ERROR \(error)")
                     completed(false)
                 } else {
-                    print("^^^ Document updated with ref ID \(ref.documentID)")
+                    print("^^^ new document created with ref ID")
+
                     college.updatelocationRatingAverage {
                         completed(true)
                     }

@@ -83,22 +83,52 @@ class CollegesDetailViewController: UIViewController {
         
         reviews.loadData(college: college) { // THIS PART NEEDS FIXING
             self.tableView.reloadData()
+            
+            
             if self.reviews.reviewArray.count > 0 {
-                var total = 0
+                var locationTotal = 0
+                var nightlifeTotal = 0
+                var foodTotal = 0
+                var professorTotal = 0
+                var diversityTotal = 0
+                var sportsTotal = 0
+                var weatherTotal = 0
+                var greekLifeTotal = 0
+                var classroomSizeTotal = 0
+                var workloadTotal = 0
                 for review in self.reviews.reviewArray {
-                    //                   total = total + review.rating
+                    locationTotal = locationTotal + review.locationRating
+                    nightlifeTotal = nightlifeTotal + review.locationRating
+                    foodTotal = foodTotal + review.locationRating
+                    professorTotal = professorTotal + review.locationRating
+                    diversityTotal = diversityTotal + review.locationRating
+                    sportsTotal = sportsTotal + review.locationRating
+                    weatherTotal = weatherTotal + review.locationRating
+                    greekLifeTotal = greekLifeTotal + review.locationRating
+                    classroomSizeTotal = classroomSizeTotal + review.locationRating
+                    workloadTotal = workloadTotal + review.locationRating
+                    
                 }
-                let average = Double(total) / Double(self.reviews.reviewArray.count)
-                self.averageLocationRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageNightlifeRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageFoodRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageProfessorRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageDiversityRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageSportsRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageWeatherRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageGreekLifeRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageClassroomSizeRatingLabel.text = "\(average.roundTo(places: 1))"
-                self.averageWorkloadRatingLabel.text = "\(average.roundTo(places: 1))"
+                let locationAverage = Double(locationTotal) / Double(self.reviews.reviewArray.count)
+                let nightlifeAverage = Double(nightlifeTotal) / Double(self.reviews.reviewArray.count)
+                let foodAverage = Double(foodTotal) / Double(self.reviews.reviewArray.count)
+                let professorAverage = Double(professorTotal) / Double(self.reviews.reviewArray.count)
+                let diversityAverage = Double(diversityTotal) / Double(self.reviews.reviewArray.count)
+                let sportsAverage = Double(sportsTotal) / Double(self.reviews.reviewArray.count)
+                let weatherAverage = Double(weatherTotal) / Double(self.reviews.reviewArray.count)
+                let greekLifeAverage = Double(greekLifeTotal) / Double(self.reviews.reviewArray.count)
+                let classroomSizeAverage = Double(classroomSizeTotal) / Double(self.reviews.reviewArray.count)
+                let workloadAverage = Double(workloadTotal) / Double(self.reviews.reviewArray.count)
+                self.averageLocationRatingLabel.text = "\(locationAverage.roundTo(places: 1))"
+                self.averageNightlifeRatingLabel.text = "\(nightlifeAverage.roundTo(places: 1))"
+                self.averageFoodRatingLabel.text = "\(foodAverage.roundTo(places: 1))"
+                self.averageProfessorRatingLabel.text = "\(professorAverage.roundTo(places: 1))"
+                self.averageDiversityRatingLabel.text = "\(diversityAverage.roundTo(places: 1))"
+                self.averageSportsRatingLabel.text = "\(sportsAverage.roundTo(places: 1))"
+                self.averageWeatherRatingLabel.text = "\(weatherAverage.roundTo(places: 1))"
+                self.averageGreekLifeRatingLabel.text = "\(greekLifeAverage.roundTo(places: 1))"
+                self.averageClassroomSizeRatingLabel.text = "\(classroomSizeAverage.roundTo(places: 1))"
+                self.averageWorkloadRatingLabel.text = "\(workloadAverage.roundTo(places: 1))"
                 
                 
             } else {

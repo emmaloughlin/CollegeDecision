@@ -14,35 +14,46 @@ import GoogleSignIn
 
 class CollegesListViewController: UIViewController {
     
-    var colleges: Colleges!
-    var authUI: FUIAuth!
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
+
+    
+    var colleges: Colleges!
+    var authUI: FUIAuth!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         authUI = FUIAuth.defaultAuthUI()
-        // You need to adopt a FUIAuthDelegate protocol to receive callback
+
+//        // You need to adopt a FUIAuthDelegate protocol to receive callback
         authUI.delegate = self
         
+    
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "CollegeCell")
         tableView.isHidden = true
         
         
         colleges = Colleges()
+        colleges.collegeArray.append(College(name: "Boston College", address: "Comm Ave", coordinate: CLLocationCoordinate2D(), averageLocationRating: 4.0, averageNightlifeRating: 4.0, averageFoodRating: 0.0, averageProfessorRating: 0.0, averageDiversityRating: 3.0, averageSportsRating: 3.0, averageWeatherRating: 0.0, averageGreekLifeRating: 0.0, averageClassroomSizeRating: 0.0, averageWorkloadRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: false)
         colleges.loadData {
-            self.sortForSegmentPressed()
             self.tableView.reloadData()
+            self.sortForSegmentPressed()
+            
+            print("LOOKING AT DATA")
+            for college in self.colleges.collegeArray {
+                print(college.name)
+            }
+            
         }
     }
     
@@ -61,6 +72,13 @@ class CollegesListViewController: UIViewController {
         } else {
             tableView.isHidden = false
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -109,12 +127,17 @@ class CollegesListViewController: UIViewController {
 
 extension CollegesListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            print("We have \(colleges.collegeArray.count) rows")
         return colleges.collegeArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CollegesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CollegeCell", for: indexPath) as! CollegesTableViewCell
+        
+//        cell.college = colleges.collegeArray[indexPath.row]
+        
         cell.nameLabel?.text = colleges.collegeArray[indexPath.row].name
+        print("Returning cell for \(colleges.collegeArray[indexPath.row].name)")
         return cell
     }
     

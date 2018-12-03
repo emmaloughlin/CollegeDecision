@@ -22,13 +22,15 @@ class Colleges {
             guard error == nil else {
                 print("*** ERROR: adding the snapshot listener \(error!.localizedDescription)")
                 return completed()
+                
             }
+                
             self.collegeArray = []
            
             for document in querySnapshot!.documents {
-                let spot = College(dictionary: document.data())
-                spot.documentID = document.documentID
-                self.collegeArray.append(spot)
+                let college = College(dictionary: document.data())
+                college.documentID = document.documentID
+                self.collegeArray.append(college)
             }
             completed()
         }
