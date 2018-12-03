@@ -26,7 +26,7 @@ class CollegesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        colleges = Colleges()
         authUI = FUIAuth.defaultAuthUI()
 
 //        // You need to adopt a FUIAuthDelegate protocol to receive callback
@@ -35,24 +35,26 @@ class CollegesListViewController: UIViewController {
     
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "CollegeCell")
+        // tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "CollegeCell")
         tableView.isHidden = true
         
         
-        colleges = Colleges()
-        colleges.collegeArray.append(College(name: "Boston College", address: "Comm Ave", coordinate: CLLocationCoordinate2D(), averageLocationRating: 4.0, averageNightlifeRating: 4.0, averageFoodRating: 0.0, averageProfessorRating: 0.0, averageDiversityRating: 3.0, averageSportsRating: 3.0, averageWeatherRating: 0.0, averageGreekLifeRating: 0.0, averageClassroomSizeRating: 0.0, averageWorkloadRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
+        
+//        print("Loading correctly")
+//        colleges.collegeArray.append(College(name: "HEYYYYYY", address: "Comm Ave", coordinate: CLLocationCoordinate2D(), averageLocationRating: 4.0, averageNightlifeRating: 4.0, averageFoodRating: 0.0, averageProfessorRating: 0.0, averageDiversityRating: 3.0, averageSportsRating: 3.0, averageWeatherRating: 0.0, averageGreekLifeRating: 0.0, averageClassroomSizeRating: 0.0, averageWorkloadRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: false)
         colleges.loadData {
-            self.tableView.reloadData()
-            self.sortForSegmentPressed()
             
             print("LOOKING AT DATA")
             for college in self.colleges.collegeArray {
                 print(college.name)
             }
+            self.tableView.reloadData()
+            // self.sortForSegmentPressed()
+
             
         }
     }

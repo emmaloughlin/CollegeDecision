@@ -22,38 +22,25 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="CollegeCell" rowHeight="70" id="qlO-OT-PVU" customClass="CollegesTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollegeCell" id="IAu-1L-237" customClass="CollegesTableViewCell" customModule="CollegeDecision" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qlO-OT-PVU" id="ShV-HA-KJI">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="69.666666666666671"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IAu-1L-237" id="EXh-xg-PfS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmt-5w-Uci">
-                                                    <rect key="frame" x="8" y="7.9999999999999964" width="320" height="53.666666666666657"/>
-                                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of ratings " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu7-0q-QiL">
-                                                    <rect key="frame" x="152" y="24" width="55" height="35"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="College Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-zm-nmg">
+                                                    <rect key="frame" x="21" y="11" width="135" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="lmt-5w-Uci" firstAttribute="top" secondItem="ShV-HA-KJI" secondAttribute="top" constant="8" id="HRF-0R-vyw"/>
-                                                <constraint firstItem="lmt-5w-Uci" firstAttribute="leading" secondItem="ShV-HA-KJI" secondAttribute="leading" constant="8" id="Zl5-G8-3d0"/>
-                                                <constraint firstAttribute="bottom" secondItem="lmt-5w-Uci" secondAttribute="bottom" constant="8" id="lzK-oz-cCy"/>
-                                                <constraint firstAttribute="trailing" secondItem="lmt-5w-Uci" secondAttribute="trailing" constant="8" id="oUz-Gu-75t"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="nameLabel" destination="lmt-5w-Uci" id="EcN-Sp-Moh"/>
-                                            <segue destination="nYy-gN-0pC" kind="show" identifier="ShowCollege" id="15o-W4-yL3"/>
+                                            <outlet property="nameLabel" destination="f3W-zm-nmg" id="OwQ-z7-0VN"/>
+                                            <segue destination="nYy-gN-0pC" kind="show" identifier="ShowCollege" id="HuV-fo-NEj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -111,7 +98,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sortSegmentedControl" destination="I2O-eC-EKl" id="sZG-Z6-6bq"/>
-                        <outlet property="tableView" destination="rFb-O9-0fB" id="o6Y-yt-rAf"/>
+                        <outlet property="tableView" destination="rFb-O9-0fB" id="ASW-Me-Z0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -304,40 +291,42 @@
                                 <rect key="frame" x="0.0" y="397" width="375" height="332"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R6A-C4-tuD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" id="R6A-C4-tuD" customClass="CollegeReviewsTableViewCell" customModule="CollegeDecision" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6A-C4-tuD" id="jm4-Py-jby">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kV-sD-tfD">
-                                                    <rect key="frame" x="15" y="11" width="115" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kV-sD-tfD">
+                                                    <rect key="frame" x="14" y="11" width="115" height="26"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="115" id="H6t-ay-cPI"/>
+                                                        <constraint firstAttribute="height" constant="26" id="yUF-dg-cgy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-em-VaL">
-                                                    <rect key="frame" x="158" y="15" width="202" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-em-VaL">
+                                                    <rect key="frame" x="293.66666666666669" y="11" width="67.333333333333314" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="msT-bt-dOX"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0jk-em-VaL" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="topMargin" constant="-40" id="7vN-DL-Cgd"/>
-                                                <constraint firstItem="0jk-em-VaL" firstAttribute="leading" secondItem="1kV-sD-tfD" secondAttribute="trailing" constant="28" id="BYD-n7-RQb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0jk-em-VaL" secondAttribute="trailing" constant="-1" id="Va5-8C-2vy"/>
-                                                <constraint firstItem="0jk-em-VaL" firstAttribute="bottom" secondItem="jm4-Py-jby" secondAttribute="bottomMargin" constant="4" id="f0R-6V-ftC"/>
-                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="topMargin" constant="-44" id="j3W-a9-puX"/>
-                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="leading" secondItem="jm4-Py-jby" secondAttribute="leadingMargin" constant="-1" id="qFx-Gq-pCb"/>
-                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="centerY" secondItem="jm4-Py-jby" secondAttribute="centerY" id="qKs-UV-YYr"/>
+                                                <constraint firstItem="0jk-em-VaL" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="top" constant="11" id="4sE-ox-hwb"/>
+                                                <constraint firstAttribute="trailing" secondItem="0jk-em-VaL" secondAttribute="trailing" constant="14" id="riK-Ug-3bG"/>
+                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="leading" secondItem="jm4-Py-jby" secondAttribute="leading" constant="14" id="sc9-0R-goA"/>
+                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="top" constant="11" id="u9f-Ks-KOz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="reviewTextLabel" destination="0jk-em-VaL" id="dEx-Vp-yig"/>
+                                            <outlet property="reviewTitleLabel" destination="1kV-sD-tfD" id="pxI-Xt-KbT"/>
                                             <segue destination="H31-WP-ALo" kind="show" identifier="ShowCollege" id="S2I-H7-bxf"/>
                                         </connections>
                                     </tableViewCell>
@@ -1590,6 +1579,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S2I-H7-bxf"/>
-        <segue reference="15o-W4-yL3"/>
+        <segue reference="HuV-fo-NEj"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -50,7 +50,7 @@ class CollegesDetailViewController: UIViewController {
             self.view.addGestureRecognizer(tap)
         
             reviews = Reviews()
-//            mapView.delegate = self  // whats wrong w this
+            // mapView.delegate = self  // whats wrong w this
             tableView.delegate = self
             tableView.dataSource = self
         

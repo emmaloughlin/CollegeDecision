@@ -93,7 +93,7 @@ class College: NSObject, MKAnnotation {
         let averageWorkloadRating = dictionary["averageWorkloadRating"] as! Double? ?? 0.0
         let numberOfReviews = dictionary["numberOfReviews"] as! Int? ?? 0
         let postingUserID = dictionary["postingUserID"] as! String? ?? ""
-        self.init(name: name, address: address, coordinate: CLLocationCoordinate2D(), averageLocationRating: averageLocationRating, averageNightlifeRating: averageNightlifeRating, averageFoodRating: averageFoodRating, averageProfessorRating: averageProfessorRating, averageDiversityRating: averageDiversityRating, averageSportsRating: averageSportsRating, averageWeatherRating: averageWeatherRating, averageGreekLifeRating: averageGreekLifeRating, averageClassroomSizeRating: averageClassroomSizeRating, averageWorkloadRating: averageWorkloadRating, numberOfReviews: numberOfReviews, postingUserID: postingUserID, documentID: "")
+        self.init(name: name, address: address, coordinate: coordinate, averageLocationRating: averageLocationRating, averageNightlifeRating: averageNightlifeRating, averageFoodRating: averageFoodRating, averageProfessorRating: averageProfessorRating, averageDiversityRating: averageDiversityRating, averageSportsRating: averageSportsRating, averageWeatherRating: averageWeatherRating, averageGreekLifeRating: averageGreekLifeRating, averageClassroomSizeRating: averageClassroomSizeRating, averageWorkloadRating: averageWorkloadRating, numberOfReviews: numberOfReviews, postingUserID: postingUserID, documentID: "")
     }
     
     func saveData(completed: @escaping (Bool) -> ()) {

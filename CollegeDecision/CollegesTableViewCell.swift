@@ -10,8 +10,9 @@ import UIKit
 
 class CollegesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     var college: College! {
         didSet {
