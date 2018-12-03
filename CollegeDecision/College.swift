@@ -111,7 +111,7 @@ class College: NSObject, MKAnnotation {
         if self.documentID != "" {
             print("Updating existing document: ")
             print(self.documentID)
-            let ref = db.collection("colleges").document(self.documentID)
+            let ref = db.collection("colleges").document(self.documentID) // PROBLEM!!! 
             ref.setData(dataToSave) { (error) in
                 if let error = error {
                     print("*** ERROR: updating document \(self.documentID) \(error.localizedDescription)")
