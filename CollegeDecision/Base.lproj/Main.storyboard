@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-O9-0fB">
-                                <rect key="frame" x="0.0" y="145" width="375" height="584"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollegeCell" id="IAu-1L-237" customClass="CollegesTableViewCell" customModule="CollegeDecision" customModuleProvider="target">
@@ -29,14 +29,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="College Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-zm-nmg">
-                                                    <rect key="frame" x="21" y="11" width="135" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-zm-nmg">
+                                                    <rect key="frame" x="23" y="19" width="329" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f3W-zm-nmg" firstAttribute="leading" secondItem="EXh-xg-PfS" secondAttribute="leadingMargin" constant="8" id="3Q5-fT-L1K"/>
+                                                <constraint firstItem="f3W-zm-nmg" firstAttribute="top" secondItem="EXh-xg-PfS" secondAttribute="topMargin" constant="8" id="V1b-xq-56r"/>
+                                                <constraint firstItem="f3W-zm-nmg" firstAttribute="bottom" secondItem="EXh-xg-PfS" secondAttribute="bottomMargin" constant="8" id="lfd-ad-HyJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="f3W-zm-nmg" secondAttribute="trailing" constant="8" id="t1l-Yd-Qjr"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="f3W-zm-nmg" id="OwQ-z7-0VN"/>
@@ -45,25 +50,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Colleges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-gS-C0O">
-                                <rect key="frame" x="76" y="100" width="223" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviewed Colleges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-gS-C0O">
+                                <rect key="frame" x="10" y="100" width="355" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="q1u-ko-BMj"/>
+                                    <constraint firstAttribute="width" constant="300" id="Oi0-Ht-ByZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="jGz-Je-PX2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ViJ-gS-C0O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="83g-eM-AFF"/>
-                            <constraint firstItem="rFb-O9-0fB" firstAttribute="top" secondItem="ViJ-gS-C0O" secondAttribute="bottom" constant="15" id="ODI-s6-a2V"/>
+                            <constraint firstItem="ViJ-gS-C0O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="8zH-Ut-S65"/>
+                            <constraint firstItem="rFb-O9-0fB" firstAttribute="top" secondItem="ViJ-gS-C0O" secondAttribute="bottom" constant="10" id="CZf-qJ-aRh"/>
+                            <constraint firstItem="rFb-O9-0fB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jcl-C1-cN7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViJ-gS-C0O" secondAttribute="trailing" constant="10" id="Lro-ay-Qi2"/>
                             <constraint firstItem="rFb-O9-0fB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TC2-FB-D26"/>
+                            <constraint firstItem="rFb-O9-0fB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ufm-9Q-kuO"/>
                             <constraint firstItem="rFb-O9-0fB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YG3-0f-gaP"/>
                             <constraint firstAttribute="trailing" secondItem="rFb-O9-0fB" secondAttribute="trailing" id="bux-RU-LeQ"/>
-                            <constraint firstItem="ViJ-gS-C0O" firstAttribute="centerX" secondItem="rFb-O9-0fB" secondAttribute="centerX" id="xmZ-gu-LvR"/>
-                            <constraint firstItem="ViJ-gS-C0O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="zMZ-ft-xOH"/>
+                            <constraint firstItem="ViJ-gS-C0O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fUm-UW-f6L"/>
+                            <constraint firstItem="rFb-O9-0fB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h1L-Ri-7ym"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -129,155 +138,202 @@
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Location Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0e-5d-XIu">
-                                <rect key="frame" x="16" y="173" width="57" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkO-8I-qjM">
-                                <rect key="frame" x="81" y="185" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Nightlife Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myt-td-4Td">
-                                <rect key="frame" x="16" y="217" width="57" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-a1-LXb">
-                                <rect key="frame" x="81" y="229" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg.         Food        Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-8i-gzF">
-                                <rect key="frame" x="16" y="261" width="57" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-Ey-Iz0">
-                                <rect key="frame" x="81" y="273" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Professor Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9A-mA-nv8">
-                                <rect key="frame" x="16" y="305" width="57" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHQ-DI-2Zk">
-                                <rect key="frame" x="81" y="317" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Diversity Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytQ-tg-N7p">
-                                <rect key="frame" x="16" y="351" width="57" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-MM-QMS">
-                                <rect key="frame" x="81" y="363" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg.       Sports       Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-Pl-hlz">
-                                <rect key="frame" x="118" y="173" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus Location " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGj-Sw-r5U">
-                                <rect key="frame" x="260.66666666666669" y="173" width="98.333333333333314" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-Zf-EBX">
-                                <rect key="frame" x="187" y="185" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Weather Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-hi-eOl">
-                                <rect key="frame" x="118" y="217" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOz-s1-AyO">
-                                <rect key="frame" x="187" y="229" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg.      Greek Life Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-Cf-jCj">
-                                <rect key="frame" x="118" y="261" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeW-Ij-cGa">
-                                <rect key="frame" x="187" y="273" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Classroom Size Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJO-RP-pR4">
-                                <rect key="frame" x="118" y="305" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-hE-l7u">
-                                <rect key="frame" x="187" y="317" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Workload Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-XK-ivf">
-                                <rect key="frame" x="118" y="351" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Rs-Q7-ZUy">
-                                <rect key="frame" x="261" y="217" width="98" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rA-DI-11m">
-                                <rect key="frame" x="261" y="357" width="98" height="30"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Location Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0e-5d-XIu">
+                                <rect key="frame" x="16" y="173" width="66" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="0W8-Aa-CLH"/>
+                                    <constraint firstAttribute="width" constant="66" id="JhP-aO-snb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkO-8I-qjM">
+                                <rect key="frame" x="81" y="185" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Zao-4C-HAd"/>
+                                    <constraint firstAttribute="height" constant="25" id="y1E-Ap-4vG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Nightlife Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myt-td-4Td">
+                                <rect key="frame" x="16" y="217" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="qj0-ZY-0bw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-a1-LXb">
+                                <rect key="frame" x="81" y="229" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="OTL-6n-I7P"/>
+                                    <constraint firstAttribute="height" constant="25" id="VMd-81-vsQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg.         Food        Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-8i-gzF">
+                                <rect key="frame" x="16" y="261" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="yar-nt-m1V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-Ey-Iz0">
+                                <rect key="frame" x="81" y="273" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="i4W-vd-8vY"/>
+                                    <constraint firstAttribute="height" constant="25" id="yb9-ap-8jd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Professor Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9A-mA-nv8">
+                                <rect key="frame" x="16" y="305" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="zb3-rR-z6Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHQ-DI-2Zk">
+                                <rect key="frame" x="81" y="317" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="bXQ-Ud-VWF"/>
+                                    <constraint firstAttribute="height" constant="25" id="pje-5L-WMe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Diversity Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytQ-tg-N7p">
+                                <rect key="frame" x="16" y="351" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="aKE-HY-lWZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-MM-QMS">
+                                <rect key="frame" x="81" y="363" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="PTi-gL-0ZX"/>
+                                    <constraint firstAttribute="width" constant="25" id="iSV-sl-4e4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg.       Sports       Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-Pl-hlz">
+                                <rect key="frame" x="118" y="173" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="fnV-Ai-J6o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Location " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGj-Sw-r5U">
+                                <rect key="frame" x="233" y="173" width="126" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="6Ut-01-1PZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="vjP-kY-zb2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-Zf-EBX">
+                                <rect key="frame" x="187" y="185" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="87A-Rd-KKJ"/>
+                                    <constraint firstAttribute="width" constant="25" id="CJ0-fx-gqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Weather Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-hi-eOl">
+                                <rect key="frame" x="118" y="217" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="K8X-aE-IDh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOz-s1-AyO">
+                                <rect key="frame" x="187" y="229" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="IGP-GV-gss"/>
+                                    <constraint firstAttribute="height" constant="25" id="wAv-Zo-GqQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg.      Greek Life Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-Cf-jCj">
+                                <rect key="frame" x="118" y="261" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="IBM-BV-BVR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeW-Ij-cGa">
+                                <rect key="frame" x="187" y="273" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="eyR-tJ-p3n"/>
+                                    <constraint firstAttribute="width" constant="25" id="iF0-xl-itO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Classroom Size Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJO-RP-pR4">
+                                <rect key="frame" x="118" y="305" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="eBg-sV-44z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-hE-l7u">
+                                <rect key="frame" x="187" y="317" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0wW-Hk-TQC"/>
+                                    <constraint firstAttribute="width" constant="25" id="CDi-V4-eKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Workload Rating " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-XK-ivf">
+                                <rect key="frame" x="118" y="351" width="66" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="uf0-5q-JFl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rA-DI-11m">
+                                <rect key="frame" x="234" y="347" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.57965959820000001" green="0.67659040179999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="WIN-6o-aU8"/>
+                                    <constraint firstAttribute="height" constant="40" id="iQ2-4I-7pj"/>
                                 </constraints>
                                 <state key="normal" title="Add Review">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,19 +343,19 @@
                                     <segue destination="2EC-Zm-3bF" kind="presentation" identifier="AddReview" id="PrO-A8-ltk"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lf4-Ys-3AU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lf4-Ys-3AU">
                                 <rect key="frame" x="0.0" y="397" width="375" height="332"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" id="R6A-C4-tuD" customClass="CollegeReviewsTableViewCell" customModule="CollegeDecision" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="70" id="R6A-C4-tuD" customClass="CollegeReviewsTableViewCell" customModule="CollegeDecision" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6A-C4-tuD" id="jm4-Py-jby">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6A-C4-tuD" id="jm4-Py-jby">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kV-sD-tfD">
-                                                    <rect key="frame" x="14" y="11" width="115" height="26"/>
+                                                    <rect key="frame" x="14" y="5" width="356" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="yUF-dg-cgy"/>
                                                     </constraints>
@@ -308,7 +364,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-em-VaL">
-                                                    <rect key="frame" x="293.66666666666669" y="11" width="67.333333333333314" height="26"/>
+                                                    <rect key="frame" x="20" y="36" width="341" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="msT-bt-dOX"/>
                                                     </constraints>
@@ -318,10 +374,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0jk-em-VaL" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="top" constant="11" id="4sE-ox-hwb"/>
+                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="top" constant="5" id="0VH-HH-2kA"/>
+                                                <constraint firstItem="0jk-em-VaL" firstAttribute="bottom" secondItem="jm4-Py-jby" secondAttribute="bottomMargin" constant="5" id="Gqv-dO-gJx"/>
+                                                <constraint firstAttribute="trailing" secondItem="1kV-sD-tfD" secondAttribute="trailing" constant="5" id="LMg-mu-z74"/>
+                                                <constraint firstItem="0jk-em-VaL" firstAttribute="leading" secondItem="jm4-Py-jby" secondAttribute="leadingMargin" constant="5" id="fuS-Mp-Tct"/>
+                                                <constraint firstItem="0jk-em-VaL" firstAttribute="top" secondItem="1kV-sD-tfD" secondAttribute="bottom" constant="5" id="fyJ-BP-5bp"/>
                                                 <constraint firstAttribute="trailing" secondItem="0jk-em-VaL" secondAttribute="trailing" constant="14" id="riK-Ug-3bG"/>
                                                 <constraint firstItem="1kV-sD-tfD" firstAttribute="leading" secondItem="jm4-Py-jby" secondAttribute="leading" constant="14" id="sc9-0R-goA"/>
-                                                <constraint firstItem="1kV-sD-tfD" firstAttribute="top" secondItem="jm4-Py-jby" secondAttribute="top" constant="11" id="u9f-Ks-KOz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -332,32 +391,87 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-2d-Pgv">
-                                <rect key="frame" x="187" y="364" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-2d-Pgv">
+                                <rect key="frame" x="187" y="364" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Kq0-VT-R0l"/>
+                                    <constraint firstAttribute="width" constant="25" id="O8U-ty-gSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Rs-Q7-ZUy">
+                                <rect key="frame" x="234" y="194" width="125" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="HwI-f5-n5g"/>
+                                    <constraint firstAttribute="width" constant="125" id="oLF-X9-U30"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gwg-XK-ivf" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="195" id="0D5-Gc-lEu"/>
+                            <constraint firstItem="1vc-hi-eOl" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="61" id="0db-lW-We2"/>
                             <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="1rA-DI-11m" secondAttribute="trailing" constant="16" id="0x0-tg-aLB"/>
+                            <constraint firstItem="LJO-RP-pR4" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="149" id="1PR-aE-1Uf"/>
                             <constraint firstItem="Yka-Vw-aAB" firstAttribute="top" secondItem="wmX-p9-CFk" secondAttribute="bottom" id="1Rn-Jn-Cdg"/>
+                            <constraint firstItem="nfq-a1-LXb" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="65" id="1WS-lx-SsK"/>
+                            <constraint firstItem="IjD-Pl-hlz" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="17" id="1gh-HO-5Ev"/>
+                            <constraint firstItem="1vc-hi-eOl" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="102" id="2G3-7J-IQF"/>
+                            <constraint firstItem="hNC-MM-QMS" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="207" id="4i0-tP-0wg"/>
+                            <constraint firstItem="DY5-Zf-EBX" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="171" id="5y1-WE-qC0"/>
                             <constraint firstItem="wmX-p9-CFk" firstAttribute="top" secondItem="9AB-6Z-TBh" secondAttribute="top" constant="8" id="5yq-mG-Gti"/>
+                            <constraint firstItem="1rA-DI-11m" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="191" id="7wS-FF-oif"/>
+                            <constraint firstItem="qeW-Ij-cGa" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="171" id="9GA-To-Nxd"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="top" secondItem="1rA-DI-11m" secondAttribute="bottom" constant="10" id="9Vw-IX-FBX"/>
+                            <constraint firstItem="ytQ-tg-N7p" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="195" id="9XD-Ri-NNc"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" id="BPj-Zm-eUH"/>
+                            <constraint firstItem="3Xc-2d-Pgv" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="171" id="CVV-6B-RGf"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" id="D1w-xb-NU7"/>
+                            <constraint firstItem="BRx-Ey-Iz0" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="65" id="EdX-gM-bxs"/>
+                            <constraint firstItem="Dyb-8i-gzF" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="H64-hm-txm"/>
+                            <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="1rA-DI-11m" secondAttribute="trailing" constant="16" id="IDV-XJ-uqY"/>
+                            <constraint firstItem="gwg-XK-ivf" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="102" id="Jlj-QE-YC4"/>
+                            <constraint firstItem="BRx-Ey-Iz0" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="117" id="OB4-VQ-t9F"/>
+                            <constraint firstItem="Dyb-8i-gzF" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="105" id="OxW-CU-oAd"/>
                             <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="Yka-Vw-aAB" secondAttribute="trailing" constant="16" id="RHF-kD-Arg"/>
+                            <constraint firstItem="wzj-Cf-jCj" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="102" id="RJn-Ht-75j"/>
+                            <constraint firstItem="hNC-MM-QMS" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="65" id="Rf9-cm-BYK"/>
+                            <constraint firstItem="DHQ-DI-2Zk" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="65" id="TEN-Ap-gPN"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="bottom" secondItem="9AB-6Z-TBh" secondAttribute="bottom" id="Taa-Ik-sEm"/>
-                            <constraint firstItem="1rA-DI-11m" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="201" id="UlQ-5c-VZi"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="bottom" secondItem="9AB-6Z-TBh" secondAttribute="bottom" id="Vst-ae-3xh"/>
+                            <constraint firstItem="3Xc-2d-Pgv" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="208" id="WDg-xu-0MO"/>
+                            <constraint firstItem="B9A-mA-nv8" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="149" id="YRC-K9-bQM"/>
+                            <constraint firstItem="nfq-a1-LXb" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="73" id="ZOy-9b-F7H"/>
                             <constraint firstItem="Yka-Vw-aAB" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="Zdc-tr-ckQ"/>
                             <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="wmX-p9-CFk" secondAttribute="trailing" constant="16" id="boH-9P-dMc"/>
+                            <constraint firstItem="ytQ-tg-N7p" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="cQz-wb-bAg"/>
+                            <constraint firstItem="B9A-mA-nv8" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="cZM-uC-Am8"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="trailing" secondItem="9AB-6Z-TBh" secondAttribute="trailing" id="dN5-qM-SXz"/>
+                            <constraint firstItem="AOz-s1-AyO" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="73" id="eOg-ct-iEq"/>
+                            <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="3Rs-Q7-ZUy" secondAttribute="trailing" constant="16" id="fxb-cV-Dwk"/>
+                            <constraint firstItem="IjD-Pl-hlz" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="118" id="hDN-5V-t5X"/>
+                            <constraint firstItem="DY5-Zf-EBX" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="29" id="hVb-Z3-9eZ"/>
+                            <constraint firstItem="VkO-8I-qjM" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="65" id="jfY-9m-IWV"/>
+                            <constraint firstItem="9AB-6Z-TBh" firstAttribute="trailing" secondItem="kGj-Sw-r5U" secondAttribute="trailing" constant="16" id="jln-Nm-bal"/>
+                            <constraint firstItem="Myt-td-4Td" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="jpu-jf-quM"/>
+                            <constraint firstItem="LJO-RP-pR4" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="102" id="l0S-Bm-jgU"/>
+                            <constraint firstItem="qeW-Ij-cGa" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="117" id="loo-Az-AlI"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="trailing" secondItem="9AB-6Z-TBh" secondAttribute="trailing" id="npx-3K-C4J"/>
+                            <constraint firstItem="93I-hE-l7u" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="171" id="ohW-cd-C4M"/>
+                            <constraint firstItem="93I-hE-l7u" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="161" id="r1m-Lm-Qzy"/>
+                            <constraint firstItem="wzj-Cf-jCj" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="105" id="rIo-Zb-xJ4"/>
+                            <constraint firstItem="AOz-s1-AyO" firstAttribute="leading" secondItem="CeN-IR-HlV" secondAttribute="leadingMargin" constant="171" id="rak-aW-9OU"/>
+                            <constraint firstItem="DHQ-DI-2Zk" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="161" id="sSE-cr-kYN"/>
+                            <constraint firstItem="D0e-5d-XIu" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="17" id="tGn-Pi-QTz"/>
+                            <constraint firstItem="3Rs-Q7-ZUy" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="38" id="uII-pg-i4K"/>
+                            <constraint firstItem="kGj-Sw-r5U" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="17" id="uQE-DO-iAH"/>
                             <constraint firstItem="lf4-Ys-3AU" firstAttribute="bottom" secondItem="9AB-6Z-TBh" secondAttribute="bottom" id="ucP-F5-eKB"/>
                             <constraint firstItem="wmX-p9-CFk" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="uuY-WW-aoz"/>
+                            <constraint firstItem="VkO-8I-qjM" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="29" id="uz2-I8-vMv"/>
+                            <constraint firstItem="Myt-td-4Td" firstAttribute="top" secondItem="Yka-Vw-aAB" secondAttribute="bottom" constant="61" id="vT2-sb-B9T"/>
+                            <constraint firstItem="D0e-5d-XIu" firstAttribute="leading" secondItem="9AB-6Z-TBh" secondAttribute="leading" constant="16" id="y9N-Sa-jix"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9AB-6Z-TBh"/>
                     </view>
@@ -417,7 +531,7 @@
                         <sections>
                             <tableViewSection id="Ein-Ps-Bf5">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="Q8q-D4-HTf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="65" id="Q8q-D4-HTf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q8q-D4-HTf" id="l32-yq-VcD">
@@ -443,7 +557,7 @@
                             </tableViewSection>
                             <tableViewSection id="iT0-ie-ZD9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="40" id="G9E-gg-rii">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="40" id="G9E-gg-rii">
                                         <rect key="frame" x="0.0" y="65" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G9E-gg-rii" id="ppd-r4-ahX">
@@ -484,28 +598,32 @@
                             </tableViewSection>
                             <tableViewSection id="2nP-CP-eDa">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="40" id="nn4-rq-muN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="40" id="nn4-rq-muN">
                                         <rect key="frame" x="0.0" y="105" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nn4-rq-muN" id="NIO-br-ps3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="39.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click to Rate the Following: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-a8-sBn">
-                                                    <rect key="frame" x="135" y="11" width="202" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to Rate the Following: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-a8-sBn">
+                                                    <rect key="frame" x="156.33333333333337" y="11.000000000000002" width="180.66666666666663" height="28.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7Tz-a8-sBn" secondAttribute="bottom" id="87s-yC-pgF"/>
+                                                <constraint firstItem="7Tz-a8-sBn" firstAttribute="top" secondItem="NIO-br-ps3" secondAttribute="top" constant="11" id="bI6-cK-wYy"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Tz-a8-sBn" secondAttribute="trailing" constant="38" id="vnl-fu-v7e"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="dMl-Zf-u30">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="CGs-07-VG9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="CGs-07-VG9">
                                         <rect key="frame" x="0.0" y="145" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CGs-07-VG9" id="qbC-Ud-1oO">
@@ -590,7 +708,7 @@
                             </tableViewSection>
                             <tableViewSection id="0Dj-ae-RBo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="K9I-hs-lDi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="K9I-hs-lDi">
                                         <rect key="frame" x="0.0" y="195" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9I-hs-lDi" id="iPw-kU-ki2">
@@ -760,7 +878,7 @@
                             </tableViewSection>
                             <tableViewSection id="PSp-XV-Zl2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="ZgL-Ku-sr9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="ZgL-Ku-sr9">
                                         <rect key="frame" x="0.0" y="295" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZgL-Ku-sr9" id="o7m-yo-1um">
@@ -930,7 +1048,7 @@
                             </tableViewSection>
                             <tableViewSection id="yPm-cC-fTb">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="s5Z-fM-rw7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="s5Z-fM-rw7">
                                         <rect key="frame" x="0.0" y="395" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s5Z-fM-rw7" id="1YS-H7-Yqs">
@@ -1015,7 +1133,7 @@
                             </tableViewSection>
                             <tableViewSection id="sZS-Dq-hy3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="UcF-2V-4jN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="UcF-2V-4jN">
                                         <rect key="frame" x="0.0" y="445" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UcF-2V-4jN" id="Yd2-yf-S7l">
@@ -1100,7 +1218,7 @@
                             </tableViewSection>
                             <tableViewSection id="2cz-gK-LCy">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="4hW-dl-HCZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="4hW-dl-HCZ">
                                         <rect key="frame" x="0.0" y="495" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4hW-dl-HCZ" id="Vnp-Zo-pRu">
@@ -1185,7 +1303,7 @@
                             </tableViewSection>
                             <tableViewSection id="Vgw-Kq-jkw">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="bdp-Wt-GL0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="bdp-Wt-GL0">
                                         <rect key="frame" x="0.0" y="545" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdp-Wt-GL0" id="B1r-YE-Cxx">
@@ -1270,7 +1388,7 @@
                             </tableViewSection>
                             <tableViewSection id="mvg-2l-g7I">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Efi-fO-o1d">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Efi-fO-o1d">
                                         <rect key="frame" x="0.0" y="595" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Efi-fO-o1d" id="VLS-Ac-Pmh">
@@ -1355,7 +1473,7 @@
                             </tableViewSection>
                             <tableViewSection id="oZA-ML-79L">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="06W-KB-iuv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="06W-KB-iuv">
                                         <rect key="frame" x="0.0" y="645" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06W-KB-iuv" id="2Tn-Nz-W8A">
@@ -1393,7 +1511,7 @@
                             </tableViewSection>
                             <tableViewSection id="KmV-VH-s3n">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Vln-nR-8zS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Vln-nR-8zS">
                                         <rect key="frame" x="0.0" y="945" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vln-nR-8zS" id="8Uy-Y6-fVX">
@@ -1441,7 +1559,9 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cancelBarButton" destination="Vm1-Lm-BoW" id="Cpp-Jy-d02"/>
                         <outlet property="classroomSizeBackgroundView" destination="maT-mC-ZFL" id="bVo-aq-MhF"/>
+                        <outlet property="deleteButton" destination="C1O-RM-kvD" id="F9c-QO-DHf"/>
                         <outlet property="diversityBackgroundView" destination="0P8-z7-DR8" id="7LM-ah-k2f"/>
                         <outlet property="foodBackgroundView" destination="yNE-j3-5wK" id="XcX-2p-zSM"/>
                         <outlet property="greekLifeBackgroundView" destination="QVK-Dy-OWB" id="1zf-oI-hL3"/>
@@ -1451,6 +1571,7 @@
                         <outlet property="professorBackgroundView" destination="vhr-cH-vvZ" id="3V5-AS-xhY"/>
                         <outlet property="reviewTextView" destination="SfY-gz-Vve" id="pU2-uP-ZWf"/>
                         <outlet property="reviewTitleField" destination="Kps-pO-ic1" id="41b-Sy-nyL"/>
+                        <outlet property="saveBarButton" destination="ksp-45-kjE" id="gDf-hw-46t"/>
                         <outlet property="sportsBackgroundView" destination="3e0-tg-1LL" id="pjI-Fm-Y40"/>
                         <outlet property="weatherBackgroundView" destination="Iku-TZ-G3R" id="726-yv-g3b"/>
                         <outlet property="workloadBackgroundView" destination="h0l-w7-Sw9" id="W1f-ea-DjY"/>
@@ -1564,6 +1685,7 @@
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ck-Oy-U41">
                         <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </toolbar>
                     <connections>
                         <segue destination="nYy-gN-0pC" kind="relationship" relationship="rootViewController" id="7W8-js-jm2"/>

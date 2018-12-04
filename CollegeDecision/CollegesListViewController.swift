@@ -39,21 +39,19 @@ class CollegesListViewController: UIViewController {
         tableView.isHidden = true
         
         
-        
-//        print("Loading correctly")
-//        colleges.collegeArray.append(College(name: "HEYYYYYY", address: "Comm Ave", coordinate: CLLocationCoordinate2D(), averageLocationRating: 4.0, averageNightlifeRating: 4.0, averageFoodRating: 0.0, averageProfessorRating: 0.0, averageDiversityRating: 3.0, averageSportsRating: 3.0, averageWeatherRating: 0.0, averageGreekLifeRating: 0.0, averageClassroomSizeRating: 0.0, averageWorkloadRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: false)
         colleges.loadData {
             
-            print("LOOKING AT DATA")
-            for college in self.colleges.collegeArray {
-                print(college.name)
-            }
+//            print("LOOKING AT DATA")
+//            for college in self.colleges.collegeArray {
+//                print(college.name)
+//            }
             self.tableView.reloadData()
-            // self.sortForSegmentPressed()
+            self.sortForSegmentPressed()
 
             
         }
@@ -102,7 +100,7 @@ class CollegesListViewController: UIViewController {
         case 0: // A-Z
             colleges.collegeArray.sort(by: {$0.name < $1.name})
         case 1: // z-a
-            colleges.collegeArray.sort(by: {$0.name < $1.name})
+            colleges.collegeArray.sort(by: {$0.name > $1.name})
         default:
             print("*** ERROR: Segmented control should just have 2 segments")
         }

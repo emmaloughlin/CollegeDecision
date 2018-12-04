@@ -81,7 +81,7 @@ class CollegesDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        reviews.loadData(college: college) { // THIS PART NEEDS FIXING
+        reviews.loadData(college: college) { 
             self.tableView.reloadData()
             
             
@@ -98,15 +98,15 @@ class CollegesDetailViewController: UIViewController {
                 var workloadTotal = 0
                 for review in self.reviews.reviewArray {
                     locationTotal = locationTotal + review.locationRating
-                    nightlifeTotal = nightlifeTotal + review.locationRating
-                    foodTotal = foodTotal + review.locationRating
-                    professorTotal = professorTotal + review.locationRating
-                    diversityTotal = diversityTotal + review.locationRating
-                    sportsTotal = sportsTotal + review.locationRating
-                    weatherTotal = weatherTotal + review.locationRating
-                    greekLifeTotal = greekLifeTotal + review.locationRating
-                    classroomSizeTotal = classroomSizeTotal + review.locationRating
-                    workloadTotal = workloadTotal + review.locationRating
+                    nightlifeTotal = nightlifeTotal + review.nightlifeRating
+                    foodTotal = foodTotal + review.foodRating
+                    professorTotal = professorTotal + review.professorRating
+                    diversityTotal = diversityTotal + review.diversityRating
+                    sportsTotal = sportsTotal + review.sportsRating
+                    weatherTotal = weatherTotal + review.weatherRating
+                    greekLifeTotal = greekLifeTotal + review.greekLifeRating
+                    classroomSizeTotal = classroomSizeTotal + review.classroomSizeRating
+                    workloadTotal = workloadTotal + review.workloadRating
                     
                 }
                 let locationAverage = Double(locationTotal) / Double(self.reviews.reviewArray.count)
@@ -157,7 +157,7 @@ class CollegesDetailViewController: UIViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }
-        case "ShowReview" :
+        case "ShowCollege" :
             let destination = segue.destination as! ReviewTableViewController
             destination.college = college
             let selectedIndexPath = tableView.indexPathForSelectedRow!
@@ -244,13 +244,20 @@ class CollegesDetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        college.name = nameField.text!
-        college.address = addressField.text!
-        college.saveData { success in
-            if success {
-                self.leaveViewController()
-            } else {
-                print("*** ERROR: Please save data.")
+        if nameField.text == nil || nameField.text == "" {
+            let alertController = UIAlertController(title: "Error!", message: "Please enter a college before saving for press cancel.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        } else {
+            college.name = nameField.text!
+            college.address = addressField.text!
+            college.saveData { success in
+                if success {
+                    self.leaveViewController()
+                } else {
+                    print("*** ERROR: Please save data.")
+                }
             }
         }
     }

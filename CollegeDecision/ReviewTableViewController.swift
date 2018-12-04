@@ -13,7 +13,8 @@ class ReviewTableViewController: UITableViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reviewTextView: UITextView!
-    @IBOutlet weak var deleteButton: UILabel!
+
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var reviewTitleField: UITextField!
     
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
@@ -184,7 +185,7 @@ class ReviewTableViewController: UITableViewController {
         workloadRating = review.workloadRating
         reviewTitleField.text = review.title
         reviewTextView.text = review.text
-//        enableDisableSaveButton()
+        enableDisableSaveButton()
         
         
         
@@ -310,13 +311,14 @@ class ReviewTableViewController: UITableViewController {
         foodBackgroundView.addBorder(width: 0.5, radius: 5.0, color: .black)
     }
     
-//    func enableDisableSaveButton() {
-//        if reviewTitleField.text != "" {
-//            saveBarButton.isEnabled = true
-//        } else {
-//            saveBarButton.isEnabled = false
-//        }
-//    }
+    func enableDisableSaveButton() {
+        if reviewTitleField.text != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+    }
+    
     
     func saveAndSegue() {
         review.title = reviewTitleField.text!
@@ -389,7 +391,7 @@ class ReviewTableViewController: UITableViewController {
     
     
     @IBAction func reviewTitleChanged(_ sender: UITextField) {
-//        enableDisableSaveButton()
+        enableDisableSaveButton()
     }
     
     @IBAction func returnTitleDonePressed(_ sender: UITextField) {
