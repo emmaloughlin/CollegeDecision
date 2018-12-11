@@ -22,11 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyCJ30xUUel1k-eUligfWIsx8VQUAfv2ZAM")
         FirebaseApp.configure()
         
-//        let db = Firestore.firestore()
-//        let settings = db.settings
-//        settings.areTimestampsInSnapshotsEnabled = true
-//        db.settings = settings
-        
         return true
     }
 

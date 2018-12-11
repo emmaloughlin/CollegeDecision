@@ -174,18 +174,14 @@ class CollegesDetailViewController: UIViewController {
         saveBarButton.isEnabled = !(nameField.text == "")
     }
     
-    
-    
+
         
     @IBAction func textFieldReturnPressed(_ sender: UITextField) {
         sender.resignFirstResponder()
         college.name = nameField.text!
         college.address = addressField.text!
         updateUserInterface()
-        
     }
-    
-    
     
     func disableTextEditing() {
         nameField.backgroundColor = UIColor.clear
@@ -307,7 +303,6 @@ extension CollegesDetailViewController: GMSAutocompleteViewControllerDelegate {
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-    
 }
 
 extension CollegesDetailViewController: UITableViewDelegate, UITableViewDataSource {

@@ -13,8 +13,7 @@ import FirebaseUI
 import GoogleSignIn
 
 class CollegesListViewController: UIViewController {
-    
-    
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
@@ -52,7 +51,6 @@ class CollegesListViewController: UIViewController {
 //            }
             self.tableView.reloadData()
             self.sortForSegmentPressed()
-
             
         }
     }
@@ -144,9 +142,7 @@ extension CollegesListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
 }
-
 
 extension CollegesListViewController: FUIAuthDelegate {
     func application(_ app: UIApplication, open url: URL,
@@ -164,6 +160,7 @@ extension CollegesListViewController: FUIAuthDelegate {
                 print("*** We signed in with the user \(user.email ?? "unknown e-mail")")
         }
     }
+
     func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
         
         // Create an instance of the FirebaseAuth login view controller
