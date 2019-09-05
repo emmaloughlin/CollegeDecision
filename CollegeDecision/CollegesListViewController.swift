@@ -17,10 +17,11 @@ class CollegesListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
-
+    @IBOutlet weak var numberOfReviews: UILabel!
     
     var colleges: Colleges!
     var authUI: FUIAuth!
+    var reviews: Reviews! // ADDED THIS 
     
 
     override func viewDidLoad() {
@@ -37,7 +38,6 @@ class CollegesListViewController: UIViewController {
         // tableView.register(CollegesTableViewCell.self, forCellReuseIdentifier: "CollegeCell")
         tableView.isHidden = true
         
-        
 
     }
     
@@ -45,12 +45,11 @@ class CollegesListViewController: UIViewController {
         navigationController?.setToolbarHidden(false, animated: false)
         colleges.loadData {
             
-//            print("LOOKING AT DATA")
-//            for college in self.colleges.collegeArray {
-//                print(college.name)
-//            }
+
             self.tableView.reloadData()
             self.sortForSegmentPressed()
+            
+            self.numberOfReviews.text = String(self.reviews.reviewArray.count) // THIS CHANGED
             
         }
     }
