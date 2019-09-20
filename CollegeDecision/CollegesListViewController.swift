@@ -49,7 +49,7 @@ class CollegesListViewController: UIViewController {
             self.tableView.reloadData()
             self.sortForSegmentPressed()
             
-            self.numberOfReviews.text = String(self.reviews.reviewArray.count) // THIS CHANGED
+          //  self.numberOfReviews.text = String(self.reviews.reviewArray.count) // THIS CHANGED
             
         }
     }
